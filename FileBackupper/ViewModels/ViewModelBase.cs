@@ -1,6 +1,5 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
-using System;
 
 namespace FileBackupper.ViewModels;
 public class ViewModelBase : ObservableObject

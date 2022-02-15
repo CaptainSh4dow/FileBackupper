@@ -1,9 +1,6 @@
-﻿using System;
-
-namespace FileBackupper.ViewModels;
+﻿namespace FileBackupper;
 public interface ICloseWindow
 {
-
     Action Close { get; set; }
 
 }

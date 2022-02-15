@@ -1,15 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using FileBackupper.Models;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Text.Json;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace FileBackupper.ViewModels;
@@ -81,7 +76,11 @@ public partial class MainViewModel : ViewModelBase, ICloseWindow
 
     private async Task StartBackuping()
     {
-
+        if (MainProfile.Directories.Count(x => x.Value == false) == 0)
+        {
+            MessageBox.Show("There's Nothing to Backup!", "Empty");
+            return;
+        }
         cancellationToken = new();
         IsBusy = true;
         TimeSpan onePercent = MainProfile.Duration * TimeUnits[MainProfile.SelectedTimeUnitIndex].Value * 0.01;

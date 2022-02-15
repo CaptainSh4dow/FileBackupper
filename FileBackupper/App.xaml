@@ -2,9 +2,7 @@
     x:Class="FileBackupper.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:FileBackupper"
     xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-    xmlns:ui="http://schemas.modernwpf.com/2019"
     DispatcherUnhandledException="Application_DispatcherUnhandledException"
     StartupUri="MainWindow.xaml">
 

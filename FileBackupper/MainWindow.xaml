@@ -2,7 +2,6 @@
     x:Class="FileBackupper.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     xmlns:local="clr-namespace:FileBackupper"
@@ -19,6 +18,11 @@
     TitleCharacterCasing="Normal"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
+    <mah:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <Image Margin="5,4,0,0" Source="Floppy.ico" />
+        </DataTemplate>
+    </mah:MetroWindow.IconTemplate>
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding LoaddedCommand}" />
@@ -219,7 +223,6 @@
 
 
         <DataGrid
-            IsEnabled="{Binding IsNotBusy}"
             Grid.Row="2"
             Grid.RowSpan="6"
             Grid.Column="0"
@@ -230,6 +233,7 @@
             Background="{StaticResource DarkerMain}"
             ColumnWidth="*"
             FontSize="18"
+            IsEnabled="{Binding IsNotBusy}"
             ItemsSource="{Binding MainProfile.Directories, UpdateSourceTrigger=PropertyChanged}"
             RowBackground="{StaticResource DarkerMain}"
             SelectionMode="Single"
