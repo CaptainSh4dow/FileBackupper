@@ -1,15 +1,9 @@
-﻿using System.Windows;
-
-namespace FileBackupper
+﻿namespace FileBackupper;
+public partial class App : Application
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
+    //Log Exceptions
+    private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
     {
-        private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
-        {
-            Logger.LogException(e.Exception);
-        }
+        Logger.LogException(e.Exception);
     }
 }

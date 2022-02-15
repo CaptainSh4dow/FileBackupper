@@ -1,29 +1,23 @@
-﻿using FileBackupper.ViewModels;
-using MahApps.Metro.Controls;
-using System.Text.RegularExpressions;
-using System.Windows.Input;
+﻿namespace FileBackupper;
 
-namespace FileBackupper
+public partial class MainWindow : MetroWindow
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : MetroWindow
+
+    public MainWindow()
     {
+        InitializeComponent();
+        //Passing Close To The ICloseWindow Interface.
+        if (DataContext is ICloseWindow icw) icw.Close = Close;
 
-        public MainWindow()
-        {
-            InitializeComponent();
-
-            if (DataContext is ICloseWindow icw) icw.Close = Close;
-
-
-        }
-        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
-        {
-            Regex regex = new Regex("[^0-9]+");
-            e.Handled = regex.IsMatch(e.Text);
-        }
 
     }
+
+
+    //Used To Validate TextBox TO Use Only Numrical Values.
+    private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+    {
+        Regex regex = new Regex("[^0-9]+");
+        e.Handled = regex.IsMatch(e.Text);
+    }
+
 }

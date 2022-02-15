@@ -1,17 +1,15 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using System.Collections.ObjectModel;
-
-
-namespace FileBackupper.Models;
+﻿namespace FileBackupper.Models;
 public class Profile : ObservableObject
 {
+    #region Private
     private double duration = 1;
     private int selectedTimeUnitIndex = 1;
+    private bool backupInLoop = false;
     private ObservableCollection<Pair<string, bool>> directories = new();
-
+    #endregion
+    #region Public
     public int SelectedTimeUnitIndex { get => selectedTimeUnitIndex; set => SetProperty(ref selectedTimeUnitIndex, value); }
     public bool BackupInLoop { get => backupInLoop; set => SetProperty(ref backupInLoop, value); }
-    private bool backupInLoop = false;
     public double Duration
     {
         get => duration;
@@ -26,6 +24,8 @@ public class Profile : ObservableObject
         }
     }
     public ObservableCollection<Pair<string, bool>> Directories { get => directories; set => SetProperty(ref directories, value); }
+
+    #endregion
     public Profile(ObservableCollection<Pair<string, bool>> directories)
     {
         Directories = directories;
