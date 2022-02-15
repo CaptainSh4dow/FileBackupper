@@ -230,6 +230,7 @@
             AlternatingRowBackground="{StaticResource DarkerMain}"
             AutoGenerateColumns="False"
             Background="{StaticResource DarkerMain}"
+            CanUserDeleteRows="False"
             ColumnWidth="*"
             FontSize="18"
             IsEnabled="{Binding IsNotBusy}"
