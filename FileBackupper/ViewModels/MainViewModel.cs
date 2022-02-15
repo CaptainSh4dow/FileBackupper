@@ -76,9 +76,15 @@ public partial class MainViewModel : ViewModelBase, ICloseWindow
 
     private async Task StartBackuping()
     {
-        if (MainProfile.Directories.Count(x => x.Value == false) == 0)
+        
+        if (MainProfile.Directories.Count(x => x.Value == true) == 0)
         {
-            MessageBox.Show("There's Nothing to Backup!", "Empty");
+            MessageBox.Show("There's Nothing to Backup! Please Add And Select Paths To Backup", "Empty.   ");
+            return;
+        }
+        if (MainProfile.Directories.Count == 0)
+        {
+            MessageBox.Show("Select Path First To Backup!", "Selection Empty.");
             return;
         }
         cancellationToken = new();

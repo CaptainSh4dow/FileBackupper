@@ -10,6 +10,10 @@
 		<ApplicationIcon>Floppy.ico</ApplicationIcon>
 		<DebugType>embedded</DebugType>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<Authors>CaptainSh4dow</Authors>
+		<Company />
+		<Description>Simple Backup Solution i made.</Description>
+		<PackageIcon>Floppy.ico</PackageIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -27,6 +31,13 @@
 
 	<ItemGroup>
 		<Folder Include="Views\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\..\..\..\Desktop\Floppy.ico">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>
