@@ -5,7 +5,7 @@ namespace FileBackupper.ViewModels;
 public class ViewModelBase : ObservableObject
 {
     private bool _isBusy = false;
-    public event EventHandler? IsBusyChanged;
+    public event EventHandler IsBusyChanged;
     public bool IsBusy
     {
         get => _isBusy; set
