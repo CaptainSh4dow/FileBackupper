@@ -6,7 +6,6 @@
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ui="http://schemas.modernwpf.com/2019"
     xmlns:viewmodels="clr-namespace:FileBackupper.ViewModels"
     Title="FolderBackupper"
     Width="1250"
@@ -260,7 +259,7 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <ui:ProgressBar
+        <mah:MetroProgressBar
             Grid.Row="8"
             Grid.ColumnSpan="10"
             Height="50"

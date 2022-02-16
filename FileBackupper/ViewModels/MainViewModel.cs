@@ -171,7 +171,7 @@ public partial class MainViewModel : ViewModelBase, ICloseWindow
                 Directory.CreateDirectory("Backups");
                 var backupDir = Directory.CreateDirectory(Path.Combine("Backups", file.Name));
                 var zipFileName = Path.Combine(backupDir.FullName, $"{DateTime.Now.ToString("yyyy-MMM-dd HH-mm-ss-ff")}.zip");
-                await Task.Run(() => ZipFile.CreateFromDirectory(file.FullName, zipFileName)).AsAsyncAction();
+                await Task.Run(() => ZipFile.CreateFromDirectory(file.FullName, zipFileName));
 
             }
             catch (Exception e)
@@ -261,8 +261,6 @@ public partial class MainViewModel : ViewModelBase, ICloseWindow
         }
     }
     #endregion
-
-
 
 
 

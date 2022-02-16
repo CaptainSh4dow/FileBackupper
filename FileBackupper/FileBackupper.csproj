@@ -2,11 +2,10 @@
 
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+		<TargetFramework>net6.0-windows</TargetFramework>
 		<Nullable>disable</Nullable>
 		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
 		<UseWPF>true</UseWPF>
-		<SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
 		<ApplicationIcon>Floppy.ico</ApplicationIcon>
 		<DebugType>embedded</DebugType>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -24,8 +23,6 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview1" />
 		<PackageReference Include="Expression.Blend.Sdk.WPF" Version="1.0.1" />
 		<PackageReference Include="MahApps.Metro" Version="2.4.9" />
-		<PackageReference Include="ModernWpfUI" Version="0.9.4" />
-		<PackageReference Include="ModernWpfUI.MahApps" Version="0.9.4" />
 		<PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
 	</ItemGroup>
 
